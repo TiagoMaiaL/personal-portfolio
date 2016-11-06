@@ -1,0 +1,20 @@
+{
+  "name": "personal-portfolio",
+  "description": "Personal portfolio template",
+  "main": "index.js",
+  "authors": [
+    "Tiago Maia"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "portfolio"
+  ],
+  "homepage": "https://github.com/TiagoMaiaL/personal-portfolio",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
