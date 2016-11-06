@@ -6,6 +6,8 @@ var gulp      = require('gulp'),
   uglify      = require('gulp-uglify'),
   responsive  = require('gulp-responsive'),
   imagemin    = require('gulp-imagemin'),
+  bower       = require('gulp-main-bower-files'),
+  filter      = require('gulp-filter'),
   browserSync = require('browser-sync').create();
 
 // TODO: include source maps.
@@ -14,7 +16,8 @@ var templatesPath = './**/*.html';
   stylesPath      = 'resources/styles/*.css',
   jsPath          = 'js/*.js',
   imagesPath      = 'resources/images/*.{jpeg,gif,png}',
-  imagesBuildPath = 'build/resources/images';
+  imagesBuildPath = 'build/resources/images',
+  bowerPath       = 'bower_components/**/*';
 
 gulp.task('styles', function() {
   gulp.src(stylesPath)
@@ -71,6 +74,34 @@ gulp.task('images', function() {
     .pipe(gulp.src(imagesBuildPath));
 });
 
+gulp.task('bower', function() {
+  var jsFilter  = filter(['**/*.js'], {restore: true}),
+    cssFilter   = filter(['**/*.css'], {restore: true});
+
+  return gulp.src('./bower.json')
+    .pipe(bower())
+
+    .pipe(jsFilter)
+    .pipe(concat('vendor.js'))
+    .pipe(uglify())
+    .pipe(rename('vendor.min.js'))
+    .pipe(gulp.dest('build/js/vendor'))
+    .pipe(jsFilter.restore)
+
+    .pipe(cssFilter)
+    .pipe(concat('vendor.css'))
+    .pipe(cleanCss())
+    .pipe(rename('vendor.min.css'))
+    .pipe(gulp.dest('build/styles/vendor'))
+    .pipe(cssFilter.restore);
+    // TODO: Build the fonts as well.
+});
+
+gulp.task('bower-watch', ['bower'], function() {
+  browserSync.reload();
+  done();
+});
+
 gulp.task('browser-sync', function() {
   browserSync.init({
     server: {
@@ -82,5 +113,6 @@ gulp.task('browser-sync', function() {
 gulp.task('serve', ['browser-sync', 'styles'], function() {
   gulp.watch(stylesPath, ['styles']);
   gulp.watch(jsPath, ['scripts-watch']);
+  gulp.watch(bowerPath, ['bower-watch']);
   gulp.watch(templatesPath).on('change', browserSync.reload);
 });
