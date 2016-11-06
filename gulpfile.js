@@ -8,14 +8,13 @@ var gulp      = require('gulp'),
   imagemin    = require('gulp-imagemin'),
   browserSync = require('browser-sync').create();
 
+// TODO: include source maps.
+
 var templatesPath = './**/*.html'; 
   stylesPath      = 'resources/styles/*.css',
   jsPath          = 'js/*.js',
   imagesPath      = 'resources/images/*.{jpeg,gif,png}',
   imagesBuildPath = 'build/resources/images';
-
-
-// TODO: include source maps.
 
 gulp.task('styles', function() {
   gulp.src(stylesPath)
