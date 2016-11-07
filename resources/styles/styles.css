@@ -7,11 +7,60 @@
 /* ------------------------ */
 /* Basic setup */
 
+/* layout */
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     line-height: 1.2em;
 }
 
+.content {
+    padding: 0 1em;
+}
+
+section, header {
+    padding-bottom: 3em;   
+}
+
+/* elements */
+
+h1 {
+    font-size: 3em;
+    line-height: 1em;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+    line-height: 1em;
+    margin-bottom: 0.2em;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin-bottom: 0.4em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+progress {
+    display: block;
+}
+
 /* ------------------------ */
 /* Sections */
+
+/* header */
+
+header {
+    height: 70vh;
+}
+
+nav ul li {
+    float: left;
+    margin-left: 1em;
+}
