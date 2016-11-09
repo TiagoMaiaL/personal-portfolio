@@ -17,27 +17,29 @@
 
 /* layout */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     line-height: 1.2em;
     color: #2c3e50;
-
-    background: #ecf0f1;
 }
 
-.content {
+section {
     padding: 0 1em;
 }
 
 section, header {
-    padding-bottom: 3em;   
+    margin-bottom: 3em;
 }
 
 /* elements */
 
 h1 {
-    font-size: 3em;
+    font-size: 2.4em;
     line-height: 1em;
     margin-bottom: 0.2em;
 }
@@ -50,7 +52,12 @@ h2 {
 
 h3 {
     font-size: 1.4em;
-    margin-bottom: 0.4em;
+    margin-bottom: 1em;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-bottom: 0.8em;
 }
 
 h1,
@@ -58,6 +65,10 @@ h2,
 h3,
 h4 {
     color: #2ecc71;
+}
+
+p {
+    margin-bottom: 1em;
 }
 
 a {
@@ -70,6 +81,15 @@ progress {
 }
 
 /* ------------------------ */
+/* Classes */
+
+.center-parent-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ------------------------ */
 /* Sections */
 
 /* header */
@@ -77,14 +97,33 @@ progress {
 header {
     height: 70vh;
     background: #2ecc71;
+    padding: 0 1em;
+    position: relative;
 }
 
 header h1,
 header h2 {
     color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header h2 {
+    font-size: 1.3em;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    display: none;
 }
 
 nav ul li {
     float: left;
     margin-left: 1em;
 }
+
+
