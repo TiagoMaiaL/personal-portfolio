@@ -1,3 +1,11 @@
+/*
+    Colors used:
+    - emerald #2ecc71
+    - clouds #ecf0f1
+    - midnight blue #2c3e50
+    - white #fff
+ */
+
 /* ------------------------ */
 /* Imports */
 
@@ -13,6 +21,9 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     line-height: 1.2em;
+    color: #2c3e50;
+
+    background: #ecf0f1;
 }
 
 .content {
@@ -42,6 +53,13 @@ h3 {
     margin-bottom: 0.4em;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    color: #2ecc71;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -58,6 +76,12 @@ progress {
 
 header {
     height: 70vh;
+    background: #2ecc71;
+}
+
+header h1,
+header h2 {
+    color: #fff;
 }
 
 nav ul li {
