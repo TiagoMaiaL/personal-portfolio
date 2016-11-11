@@ -126,7 +126,7 @@ progress::-webkit-progress-value {
 /* header */
 
 header {
-    height: 70vh;
+    height: 100vh;
     background: #2ecc71;
     padding: 0 1em;
     position: relative;
@@ -157,7 +157,29 @@ nav ul li {
     margin-left: 1em;
 }
 
+/* projects */
+
+.project-grid {
+    margin-left: -1em;
+    margin-right: -1em;
+    background: #ecf0f1;
+    padding: 0.5em 0;
+}
+
+.project {
+    width: 50%;
+    height: 30vh;
+    overflow: hidden;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 1em;
+}
+
 /* about */
+
+.about {
+    padding-top: 2em;
+}
 
 .skills {
     padding-top: 1em;
@@ -176,7 +198,7 @@ nav ul li {
 /* contact */
 
 .contact {
-    padding: 0 1em 1em 1em;
+    padding: 2em 1em 3em 1em;
     margin-bottom: 0;
 }
 
