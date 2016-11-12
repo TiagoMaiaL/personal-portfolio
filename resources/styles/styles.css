@@ -205,13 +205,16 @@ nav ul li {
 }
 
 .project .sources {
-    width: 58%;
+    /*min-width: 58%;*/
     margin: 0 auto;
+    text-align: center;
+    display: inline-block;
 }
 
 .project .sources .link {
     float: left;
     margin-right: 0.2em;
+    /*display: inline;*/
 }
 
 /* about */
