@@ -5,7 +5,6 @@ var gulp      = require('gulp'),
   prefixer    = require('gulp-autoprefixer'),
   uglify      = require('gulp-uglify'),
   responsive  = require('gulp-responsive'),
-  imagemin    = require('gulp-imagemin'),
   bower       = require('gulp-main-bower-files'),
   filter      = require('gulp-filter'),
   browserSync = require('browser-sync').create();
@@ -13,11 +12,11 @@ var gulp      = require('gulp'),
 // TODO: include source maps.
 
 var templatesPath = './**/*.html'; 
-  stylesPath      = 'resources/styles/*.css',
-  jsPath          = 'js/*.js',
-  imagesPath      = 'resources/images/*.{jpeg,gif,png}',
-  imagesBuildPath = 'build/resources/images',
-  bowerPath       = 'bower_components/**/*';
+  stylesPath      = './resources/styles/*.css',
+  jsPath          = './js/*.js',
+  imagesPath      = './resources/images/*.{jpg,gif,png}',
+  imagesBuildPath = './build/resources/images',
+  bowerPath       = './bower_components/**/*';
 
 gulp.task('styles', function() {
   gulp.src(stylesPath)
@@ -49,29 +48,30 @@ gulp.task('images', function() {
   gulp.src(imagesPath)
     .pipe(responsive([
       {
+        name: '*',
         width: 480,
         rename: {
           suffix: '480-small'
         }
       }, {
+        name: '*',
         width: 700,
         rename: {
           suffix: '700-medium'
         }
       }, {
+        name: '*',
         width: 1024,
         rename: {
           suffix: '1024-large'
         }
-      }
-      ], {
+      }], {
         quality: 70,
         progressive: true,
         compressionLevel: 6,
         withMetaData: false
       }))
-    .pipe(imagemin())
-    .pipe(gulp.src(imagesBuildPath));
+    .pipe(gulp.dest(imagesBuildPath));
 });
 
 gulp.task('bower', function() {
