@@ -51,19 +51,19 @@ gulp.task('images', function() {
         name: '*',
         width: 480,
         rename: {
-          suffix: '480-small'
+          suffix: '-480-small'
         }
       }, {
         name: '*',
         width: 700,
         rename: {
-          suffix: '700-medium'
+          suffix: '-700-medium'
         }
       }, {
         name: '*',
         width: 1024,
         rename: {
-          suffix: '1024-large'
+          suffix: '-1024-large'
         }
       }], {
         quality: 70,

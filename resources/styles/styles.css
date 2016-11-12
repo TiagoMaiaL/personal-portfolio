@@ -205,7 +205,6 @@ nav ul li {
 }
 
 .project .sources {
-    /*min-width: 58%;*/
     margin: 0 auto;
     text-align: center;
     display: inline-block;
@@ -214,7 +213,6 @@ nav ul li {
 .project .sources .link {
     float: left;
     margin-right: 0.2em;
-    /*display: inline;*/
 }
 
 /* about */
