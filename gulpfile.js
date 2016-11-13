@@ -52,19 +52,22 @@ gulp.task('images', function() {
         width: 480,
         rename: {
           suffix: '-480-small'
-        }
+        },
+        grayscale: 1
       }, {
         name: '*',
         width: 700,
         rename: {
           suffix: '-700-medium'
-        }
+        },
+        grayscale: 1
       }, {
         name: '*',
         width: 1024,
         rename: {
           suffix: '-1024-large'
-        }
+        },
+        grayscale: 1
       }], {
         quality: 70,
         progressive: true,
