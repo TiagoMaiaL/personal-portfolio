@@ -1,0 +1,46 @@
+/* Masonry based layout */
+
+.masonry {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.masonry > * {
+    order: 0;
+}
+
+/* width classes */
+
+.masonry-1-of-1 {
+    flex: 1 100%;
+}
+
+.masonry-1-of-2 {
+    flex: 1 50%;
+}
+
+.masonry-1-of-3 {
+    flex: 1 33.33333%;
+}
+
+.masonry-2-of-3 {
+    flex: 2 66.66666%;
+}
+
+/* row classes */
+
+.masonry-height-featured {
+    height: 45vh;
+}
+
+.masonry-height-default {
+    height: 30vh;
+}
+
+.masonry-height-small {
+    height: 20vh;
+}

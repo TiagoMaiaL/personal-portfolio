@@ -174,13 +174,10 @@ nav ul li {
 .project-grid {
     margin-left: -1em;
     margin-right: -1em;
-    background: #ecf0f1;
-    padding: 0.5em 0;
+    height: 95vh;
 }
 
 .project {
-    width: 50%;
-    height: 30vh;
     overflow: hidden;
     font-size: 0.9em;
     text-align: center;
