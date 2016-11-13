@@ -245,8 +245,8 @@ nav ul li {
 }
 
 .contacts {
-    margin-top: 1.5em;
-    width: 100%;
+    width: 50%;
+    margin: 2em auto 0 auto;
 }
 
 .single-contact {
