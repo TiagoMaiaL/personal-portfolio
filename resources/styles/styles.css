@@ -169,6 +169,10 @@ nav ul li {
     margin-left: 1em;
 }
 
+a {
+    padding: 1em 1em;
+}
+
 /* projects */
 
 .project-grid {
