@@ -11,7 +11,7 @@ var gulp      = require('gulp'),
 
 // TODO: include source maps.
 
-var templatesPath = './**/*.html'; 
+var templatesPath = './**/*.html';
   stylesPath      = './resources/styles/*.css',
   jsPath          = './js/*.js',
   imagesPath      = './resources/images/*.{jpg,gif,png}',
