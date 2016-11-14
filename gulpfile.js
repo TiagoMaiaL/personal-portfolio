@@ -62,22 +62,22 @@ gulp.task('images', function() {
   gulp.src(imagesPath)
     .pipe(responsive(getConfigurations([{
         width: 480,
-        suffix: '-480-small'
+        suffix: '-small'
       }, {
         width: 960,
-        suffix: '-480-small-2x'
+        suffix: '-small-2x'
       }, {
         width: 700,
-        suffix: '-700-medium'
+        suffix: '-medium'
       }, {
         width: 1400,
-        suffix: '-700-small-2x'
+        suffix: '-medium-2x'
       }, {
         width: 1024,
-        suffix: '-1024-large'
+        suffix: '-large'
       }, {
         width: 2048,
-        suffix: '-1024-large-2x'
+        suffix: '-large-2x'
       }]), {
         quality: 70,
         progressive: true,
