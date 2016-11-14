@@ -45,30 +45,40 @@ gulp.task('scripts-watch', ['scripts'], function() {
 });
 
 gulp.task('images', function() {
+
+  var getConfigurations = function(options) {
+    return options.map(function(option) {
+      return {
+        name: '*',
+        width: option.width,
+        rename: {
+          suffix: option.suffix
+        },
+        grayscale: 1
+      }
+    });
+  }
+
   gulp.src(imagesPath)
-    .pipe(responsive([
-      {
-        name: '*',
+    .pipe(responsive(getConfigurations([{
         width: 480,
-        rename: {
-          suffix: '-480-small'
-        },
-        grayscale: 1
+        suffix: '-480-small'
       }, {
-        name: '*',
+        width: 960,
+        suffix: '-480-small-2x'
+      }, {
         width: 700,
-        rename: {
-          suffix: '-700-medium'
-        },
-        grayscale: 1
+        suffix: '-700-medium'
       }, {
-        name: '*',
+        width: 1400,
+        suffix: '-700-small-2x'
+      }, {
         width: 1024,
-        rename: {
-          suffix: '-1024-large'
-        },
-        grayscale: 1
-      }], {
+        suffix: '-1024-large'
+      }, {
+        width: 2048,
+        suffix: '-1024-large-2x'
+      }]), {
         quality: 70,
         progressive: true,
         compressionLevel: 6,
