@@ -249,14 +249,17 @@ a {
     margin-bottom: 0;
 }
 
-.contacts {
-    width: 50%;
-    margin: 2em auto 0 auto;
+.contact-info {
+    margin-bottom: 2em;
 }
 
 .single-contact {
     display: block;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+}
+
+.single-contact .icon {
+    color: #47e6c7;
 }
 
 /* footer */
