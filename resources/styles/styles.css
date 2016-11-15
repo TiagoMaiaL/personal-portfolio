@@ -1,16 +1,15 @@
 /*
     Colors used:
-    - emerald #2ecc71
     - clouds #ecf0f1
-    - midnight blue #2c3e50
-    - white #fff
+    - midnightBlue #2c3e50
+    - alizarin #e74c3c
  */
 
 /* ------------------------ */
 /* Imports */
 
 /* Open Sans */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');*/
 
 /* ------------------------ */
 /* Basic setup */
@@ -24,9 +23,10 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
-    line-height: 1.2em;
+    line-height: 1.4em;
     text-rendering: optimizeLegibility;
-    color: #2c3e50;
+    color: #ecf0f1;
+    background: rgb(44,62,80);
 }
 
 section {
@@ -40,24 +40,24 @@ section, header {
 /* elements */
 
 h1 {
-    font-size: 2.4em;
+    font-size: 2.8em;
     line-height: 1em;
     margin-bottom: 0.2em;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 2.4em;
     line-height: 1em;
     margin-bottom: 0.2em;
 }
 
 h3 {
-    font-size: 1.4em;
+    font-size: 2em;
     margin-bottom: 1em;
 }
 
 h4 {
-    font-size: 1.2em;
+    font-size: 1.6em;
     margin-bottom: 0.8em;
 }
 
@@ -65,7 +65,11 @@ h1,
 h2,
 h3,
 h4 {
-    color: #2ecc71;
+    /*color: #2ecc71;*/
+}
+
+section h3 {
+    margin-bottom: 1.3em;
 }
 
 p {
@@ -82,23 +86,23 @@ progress {
     width: 100%;
     height: 5px;
     border: none;
-    background: #eee;
+    background: transparent;
     border-radius: 5px;
     display: block;
 }
 
 progress::-webkit-progress-bar {
-    background: #eee;
+    background: transparent;
     border-radius: 5px;
 }
 
 progress::-moz-progress-bar {
-    background: #2ecc71;
+    background: #169e83;
     border-radius: 5px;
 }
 
 progress::-webkit-progress-value {
-    background: #2ecc71;
+    background: #169e83;
     border-radius: 5px;
 }
 
@@ -136,7 +140,7 @@ progress::-webkit-progress-value {
 
 header {
     height: 100vh;
-    background: linear-gradient(rgba(46,204,113,0.8), rgba(46,204,113,0.8)), url(../resources/images/hero-large.jpg);
+    background: linear-gradient(rgba(44,62,80,0.8), rgb(44,62,80)), url(../resources/images/hero-large.jpg);
     background-size: cover;
     background-position: center;
     padding: 0 1em;
@@ -150,12 +154,12 @@ header h2 {
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 2.4em;
     margin-bottom: 0.5em;
 }
 
 header h2 {
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 nav {
@@ -260,7 +264,6 @@ a {
 footer {
     width: 100%;
     padding: 0.6em;
-    background: #ecf0f1;
     text-align: center;
     font-size: 0.85em;
 }
