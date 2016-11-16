@@ -63,3 +63,19 @@
     }
 
 }
+
+@media screen and (min-width: 900px) {
+
+    .masonry-height-featured {
+        height: 60vh;
+    }
+
+    .masonry-height-default {
+        height: 50vh;
+    }
+
+    .masonry-height-small {
+        height: 40vh;
+    }
+
+}
