@@ -314,6 +314,10 @@ footer em {
         margin: 0 auto;
     }
 
+    .project-grid {
+        box-shadow: 0px 0px 70px 0px rgba(28,28,28,1);
+    }
+
     .skills {
         padding: 0;
     }
