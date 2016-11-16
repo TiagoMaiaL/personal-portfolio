@@ -7,6 +7,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+    min-height: 100vh;
 }
 
 .masonry > * {
@@ -43,4 +44,22 @@
 
 .masonry-height-small {
     height: 20vh;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 550px) {
+
+    .masonry-height-featured {
+        height: 55vh;
+    }
+
+    .masonry-height-default {
+        height: 45vh;
+    }
+
+    .masonry-height-small {
+        height: 35vh;
+    }
+
 }

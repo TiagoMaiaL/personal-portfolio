@@ -1,15 +1,15 @@
 /*
-    Colors used:
+    Base used:
     - clouds #ecf0f1
     - midnightBlue #2c3e50
-    - alizarin #e74c3c
+    - GreenSea #16a085
  */
 
 /* ------------------------ */
 /* Imports */
 
 /* Open Sans */
-/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400');
 
 /* ------------------------ */
 /* Basic setup */
@@ -59,13 +59,6 @@ h3 {
 h4 {
     font-size: 1.6em;
     margin-bottom: 0.8em;
-}
-
-h1,
-h2,
-h3,
-h4 {
-    /*color: #2ecc71;*/
 }
 
 section h3 {
@@ -186,7 +179,6 @@ a {
 .project-grid {
     margin-left: -1em;
     margin-right: -1em;
-    height: 95vh;
 }
 
 .project {
@@ -242,7 +234,6 @@ a {
 
 .skill-name {
     margin-bottom: 0.3em;
-    font-weight: bold;
     font-size: 0.9em;
 }
 
@@ -284,4 +275,14 @@ footer em {
     display: inline-block;
     font-weight: bold;
     font-size: 0.75em;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 550px) {
+
+    .skills {
+        width: 80%;
+    }
+
 }
