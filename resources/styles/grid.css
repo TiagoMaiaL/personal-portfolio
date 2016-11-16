@@ -1,59 +1,93 @@
 
 /* Flex Grid */
 
-.container {
+.container,
+.md-container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.col-1 {
+.col-1,
+.col-md-1 {
     width: 8.3333333%;
 }
 
-.col-2 {
+.col-2,
+.col-md-2 {
     width: 16.666666%;
 }
 
-.col-3 {
+.col-3,
+.col-md-3 {
     width: 25%;
 }
 
-.col-4 {
+.col-4,
+..col-md-4 {
     width: 33.333333%;
 }
 
-.col-5 {
+.col-5,
+.col-md-5 {
     width: 41.666666%;
 }
 
-.col-6 {
+.col-6,
+.col-md-6 {
     width: 50%;
 }
 
-.col-7 {
+.col-7,
+.col-md-7 {
     width: 58.333333%;
 }
 
-.col-8 {
+.col-8,
+.col-md-8 {
     width: 66.666666%;
 }
 
-.col-9 {
+.col-9,
+.col-md-9 {
     width: 75%;
 }
 
-.col-10 {
+.col-10,
+.col-md-10 {
     width: 83.333333%;
 }
 
-.col-11 {
+.col-11,
+.col-md-11 {
     width: 91.666666%;
 }
 
-.col-12 {
+.col-12,
+.col-md-12 {
     width: 100%;
 }
 
 /* Media queries */
 
-/* TODO */
+@media screen and (max-width: 699px) {
+
+    .md-container {
+        display: block;
+    }
+
+    .col-md-1,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12 {
+        width: 100%;
+    }
+
+}
