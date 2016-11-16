@@ -297,3 +297,16 @@ footer em {
     }
 
 }
+
+@media screen and (min-width: 900px) {
+
+    body {
+        font-size: 19px;
+    }
+
+    .grid-middle {
+        width: 900px;
+        margin: 0 auto;
+    }
+
+}
