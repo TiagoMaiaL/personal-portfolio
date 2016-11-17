@@ -189,11 +189,20 @@ a {
     bottom: 1em;
     left: 50%;
     transform: translate(-50%, 0);
-    color: #47e6c7;
 }
 
 .scroll-indicator-header .icon {
     margin: 0;
+}
+
+.scroll-indicator-header,
+.github-header {
+    transition: all .2s ease-in-out;
+}
+
+.scroll-indicator-header:hover,
+.github-header:hover {
+    color: #47e6c7;
 }
 
 /* projects */
