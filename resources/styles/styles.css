@@ -288,6 +288,19 @@ a {
     color: #47e6c7;
 }
 
+.single-contact .icon,
+.single-contact .highlight-hover {
+    transition: all .2s ease-in-out;
+}
+
+.single-contact:hover .icon {
+    transform: scale(1.2);
+}
+
+.single-contact:hover .highlight-hover {
+    color: #47e6c7;
+}
+
 /* footer */
 
 footer {
