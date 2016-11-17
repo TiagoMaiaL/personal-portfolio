@@ -78,4 +78,43 @@
         height: 40vh;
     }
 
+    .masonry > * {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+
+    .masonry-1-of-1 {
+        flex: 1 100%;
+    }
+
+    .masonry-1-of-2 {
+        flex: 1 48%;
+    }
+
+    .masonry-1-of-3 {
+        flex: 1 32%;
+    }
+
+    .masonry-2-of-3 {
+        flex: 2 64%;
+    }
+
+    /* Specific style applied on larger screens only */
+    .masonry.masonry-lg-gutter {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lg-featured-shrink {
+        height: 40vh;
+    }
+
+    .lg-default-shrink {
+        height: 30vh;
+    }
+
+    .lg-top-space {
+        margin-top: 2%;
+    }
+
 }
