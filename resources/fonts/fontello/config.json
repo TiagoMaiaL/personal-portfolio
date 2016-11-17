@@ -35,6 +35,12 @@
       "css": "mail",
       "code": 59392,
       "src": "fontawesome"
+    },
+    {
+      "uid": "3838a5aba604532d2dbae5904615ea39",
+      "css": "down",
+      "code": 59394,
+      "src": "mfglabs"
     }
   ]
 }

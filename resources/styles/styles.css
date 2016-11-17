@@ -183,6 +183,19 @@ a {
     left: 2;
 }
 
+.scroll-indicator-header {
+    font-size: 1.2em;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #47e6c7;
+}
+
+.scroll-indicator-header .icon {
+    margin: 0;
+}
+
 /* projects */
 
 .project-grid {
