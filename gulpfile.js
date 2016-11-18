@@ -15,7 +15,7 @@ var gulp      = require('gulp'),
 
 var templatesPath = './**/*.html';
   stylesPath      = './resources/styles/*.css',
-  jsPath          = './js/*.js',
+  jsPath          = './resources/js/*.js',
   imagesPath      = './resources/images/*.{jpg,gif,png}',
   imagesBuildPath = './build/resources/images',
   bowerPath       = './bower_components/**/*';
