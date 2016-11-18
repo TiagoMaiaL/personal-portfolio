@@ -90,11 +90,11 @@ gulp.task('images', function() {
 });
 
 gulp.task('bower-scripts', function() {
-  var jsBlob    = '**/*.js',
-      jsFilter  = filter([jsBlob], {restore: true});
+  var jsGlob    = '**/*.js',
+      jsFilter  = filter([jsGlob], {restore: true});
 
   return gulp.src('./bower.json')
-    .pipe(bower(jsBlob, {
+    .pipe(bower(jsGlob, {
       overrides: {
         jquery: {
           main: [
@@ -112,11 +112,11 @@ gulp.task('bower-scripts', function() {
 });
 
 gulp.task('bower-styles', function() {
-  var cssBlob   = '**/*.css',
-      cssFilter = filter([cssBlob], {restore: true});
+  var cssGlob   = '**/*.css',
+      cssFilter = filter([cssGlob], {restore: true});
 
   gulp.src('./bower.json')
-    .pipe(bower(cssBlob))
+    .pipe(bower(cssGlob))
     .pipe(cssFilter)
     .pipe(concat('vendor.css'))
     .pipe(cleanCss())
