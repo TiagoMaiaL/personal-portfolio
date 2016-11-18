@@ -87,6 +87,40 @@ gulp.task('images', function() {
     .pipe(gulp.dest(imagesBuildPath));
 });
 
+gulp.task('bower-scripts', function() {
+  var jsFilter = filter(['**/*.js'], {restore: true});
+
+  return gulp.src('./bower.json')
+    .pipe(bower('**/*.js', {
+      overrides: {
+        jquery: {
+          main: [
+            './dist/jquery.min.js'
+          ]
+        }
+      }
+    }))
+    .pipe(jsFilter)
+    .pipe(concat('vendor.js'))
+    .pipe(uglify())
+    .pipe(rename('vendor.min.js'))
+    .pipe(jsFilter.restore)
+    .pipe(gulp.dest('build/js/vendor'))
+});
+
+gulp.task('bower-styles', function() {
+  var cssFilter = filter(['**/*.css'], {restore: true});
+
+  gulp.src('./bower.json')
+    .pipe(bower())
+    .pipe(cssFilter)
+    .pipe(concat('vendor.css'))
+    .pipe(cleanCss())
+    .pipe(rename('vendor.min.css'))
+    .pipe(cssFilter.restore)
+    .pipe(gulp.dest('build/styles/vendor'));
+})
+
 gulp.task('bower', function() {
   var jsFilter  = filter(['**/*.js'], {restore: true}),
     cssFilter   = filter(['**/*.css'], {restore: true});
@@ -98,15 +132,15 @@ gulp.task('bower', function() {
     .pipe(concat('vendor.js'))
     .pipe(uglify())
     .pipe(rename('vendor.min.js'))
-    .pipe(gulp.dest('build/js/vendor'))
     .pipe(jsFilter.restore)
+    .pipe(gulp.dest('build/js/vendor'))
 
     .pipe(cssFilter)
     .pipe(concat('vendor.css'))
     .pipe(cleanCss())
     .pipe(rename('vendor.min.css'))
-    .pipe(gulp.dest('build/styles/vendor'))
-    .pipe(cssFilter.restore);
+    .pipe(cssFilter.restore)
+    .pipe(gulp.dest('build/styles/vendor'));
     // TODO: Build the fonts as well.
 });
 
