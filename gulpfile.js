@@ -10,6 +10,8 @@ var gulp      = require('gulp'),
   browserSync = require('browser-sync').create();
 
 // TODO: include source maps.
+// TODO: include one main file for js and vendors
+// TODO: include one main file for css and vendors
 
 var templatesPath = './**/*.html';
   stylesPath      = './resources/styles/*.css',
@@ -88,10 +90,11 @@ gulp.task('images', function() {
 });
 
 gulp.task('bower-scripts', function() {
-  var jsFilter = filter(['**/*.js'], {restore: true});
+  var jsBlob    = '**/*.js',
+      jsFilter  = filter([jsBlob], {restore: true});
 
   return gulp.src('./bower.json')
-    .pipe(bower('**/*.js', {
+    .pipe(bower(jsBlob, {
       overrides: {
         jquery: {
           main: [
@@ -109,10 +112,11 @@ gulp.task('bower-scripts', function() {
 });
 
 gulp.task('bower-styles', function() {
-  var cssFilter = filter(['**/*.css'], {restore: true});
+  var cssBlob   = '**/*.css',
+      cssFilter = filter([cssBlob], {restore: true});
 
   gulp.src('./bower.json')
-    .pipe(bower())
+    .pipe(bower(cssBlob))
     .pipe(cssFilter)
     .pipe(concat('vendor.css'))
     .pipe(cleanCss())
@@ -121,30 +125,7 @@ gulp.task('bower-styles', function() {
     .pipe(gulp.dest('build/styles/vendor'));
 })
 
-gulp.task('bower', function() {
-  var jsFilter  = filter(['**/*.js'], {restore: true}),
-    cssFilter   = filter(['**/*.css'], {restore: true});
-
-  return gulp.src('./bower.json')
-    .pipe(bower())
-
-    .pipe(jsFilter)
-    .pipe(concat('vendor.js'))
-    .pipe(uglify())
-    .pipe(rename('vendor.min.js'))
-    .pipe(jsFilter.restore)
-    .pipe(gulp.dest('build/js/vendor'))
-
-    .pipe(cssFilter)
-    .pipe(concat('vendor.css'))
-    .pipe(cleanCss())
-    .pipe(rename('vendor.min.css'))
-    .pipe(cssFilter.restore)
-    .pipe(gulp.dest('build/styles/vendor'));
-    // TODO: Build the fonts as well.
-});
-
-gulp.task('bower-watch', ['bower'], function() {
+gulp.task('bower-watch', ['bower-scripts', 'bower-styles'], function(done) {
   browserSync.reload();
   done();
 });
