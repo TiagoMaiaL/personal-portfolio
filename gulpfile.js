@@ -98,8 +98,17 @@ gulp.task('bower-scripts', function() {
       overrides: {
         jquery: {
           main: [
-            './dist/jquery.min.js'
+            'dist/jquery.min.js'
           ]
+        },
+        masonry: {
+          main: [
+            'dist/masonry.pkgd.min.js'
+          ],
+          ignore: false
+        },
+        outlayer: {
+          ignore: true
         }
       }
     }))
@@ -123,7 +132,7 @@ gulp.task('bower-styles', function() {
     .pipe(rename('vendor.min.css'))
     .pipe(cssFilter.restore)
     .pipe(gulp.dest('build/styles/vendor'));
-})
+});
 
 gulp.task('bower-watch', ['bower-scripts', 'bower-styles'], function(done) {
   browserSync.reload();
