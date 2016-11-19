@@ -27,6 +27,7 @@ gulp.task('styles', function() {
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .on('error', console.log.bind(console))
     .pipe(cleanCss())
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('build/styles'))
@@ -93,7 +94,7 @@ gulp.task('bower-scripts', function() {
   var jsGlob    = '**/*.js',
       jsFilter  = filter([jsGlob], {restore: true});
 
-  return gulp.src('./bower.json')
+  gulp.src('./bower.json')
     .pipe(bower(jsGlob, {
       overrides: {
         jquery: {
@@ -129,6 +130,7 @@ gulp.task('bower-styles', function() {
     .pipe(cssFilter)
     .pipe(concat('vendor.css'))
     .pipe(cleanCss())
+    .on('error', console.log.bind(console))
     .pipe(rename('vendor.min.css'))
     .pipe(cssFilter.restore)
     .pipe(gulp.dest('build/styles/vendor'));
