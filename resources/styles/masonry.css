@@ -48,8 +48,16 @@
         margin-bottom: 2%;
     }
 
-    .masonry-item.width-lg-double {
-        width: 63%;
+    .width-lg-double {
+        width: 63.3%;
+    }
+
+    .height-lg-half {
+        height: 25vh;
+    }
+
+    .height-lg-greater {
+        height: 60vh;
     }
 
 }
