@@ -1,113 +1,55 @@
 /* Masonry based layout */
 
 .masonry {
-
+    min-height: 100vh;
 }
 
-.masonry > * {
+.masonry-sizer {
+    width: 50%;
+}
+
+.masonry-item {
     float: left;
-}
-
-/* width classes */
-
-.masonry-1-of-1 {
-
-}
-
-.masonry-1-of-2 {
-
-}
-
-.masonry-1-of-3 {
-
-}
-
-.masonry-2-of-3 {
-
-}
-
-/* row classes */
-
-.masonry-height-featured {
+    width: 100%;
     height: 45vh;
-}
-
-.masonry-height-default {
-    height: 30vh;
-}
-
-.masonry-height-small {
-    height: 20vh;
 }
 
 /* Media queries */
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 500px) {
 
-    .masonry-height-featured {
-        height: 55vh;
+    .masonry-sizer,
+    .masonry-item {
+        width: 50%;
     }
 
-    .masonry-height-default {
-        height: 45vh;
-    }
+}
 
-    .masonry-height-small {
-        height: 35vh;
+@media screen and (min-width: 750px) {
+
+    .masonry-item {
+        height: 50vh;
     }
 
 }
 
 @media screen and (min-width: 900px) {
 
-    .masonry-height-featured {
-        height: 60vh;
+    .masonry-sizer {
+        width: 33.333333%;
     }
 
-    .masonry-height-default {
-        height: 50vh;
+    .masonry-item {
+        width: 30%;
     }
 
-    .masonry-height-small {
-        height: 40vh;
+    .masonry-item {
+        margin: 1%;
+        margin-bottom: 2%;
     }
 
-    .masonry > * {
-        margin-right: 1%;
-        margin-left: 1%;
-    }
-
-    .masonry-1-of-1 {
-
-    }
-
-    .masonry-1-of-2 {
-
-    }
-
-    .masonry-1-of-3 {
-
-    }
-
-    .masonry-2-of-3 {
-
-    }
-
-    /* Specific style applied on larger screens only */
-    .masonry.masonry-lg-gutter {
-
-    }
-
-    .lg-featured-shrink {
-        height: 40vh;
-    }
-
-    .lg-default-shrink {
-        height: 30vh;
-    }
-
-    .lg-top-space {
-        margin-top: 2%;
+    .masonry-item.width-lg-double {
+        width: 63%;
     }
 
 }
