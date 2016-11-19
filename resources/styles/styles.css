@@ -121,7 +121,6 @@ progress::-webkit-progress-value {
 
 .icon {
     display: inline-block;
-    margin-right: 0.4em;
 }
 
 .icon.big {
@@ -173,14 +172,15 @@ nav ul li {
 }
 
 a {
-    padding: 1em 1em;
+    padding: 1em;
 }
 
 .github-header {
     font-size: 1.5em;
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 0;
+    padding: 0.5em;
 }
 
 .scroll-indicator-header {
@@ -189,10 +189,6 @@ a {
     bottom: 1em;
     left: 50%;
     transform: translate(-50%, 0);
-}
-
-.scroll-indicator-header .icon {
-    margin: 0;
 }
 
 .scroll-indicator-header,
@@ -285,6 +281,7 @@ a {
 
 .single-contact .icon {
     color: #47e6c7;
+    margin-right: 0.4em;
 }
 
 .single-contact .icon,
