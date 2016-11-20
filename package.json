@@ -26,8 +26,10 @@
     "gulp-clean-css": "^2.0.13",
     "gulp-concat": "^2.6.0",
     "gulp-filter": "^4.0.0",
+    "gulp-flatten": "^0.3.1",
     "gulp-main-bower-files": "^1.5.3",
     "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
     "gulp-responsive": "^2.6.0",
     "gulp-uglify": "^2.0.0",
     "live-reload": "^1.1.0"
