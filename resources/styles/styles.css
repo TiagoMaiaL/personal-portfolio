@@ -227,16 +227,15 @@ a {
 }
 
 .skills {
-    padding-top: 1em;
+    padding: 1em 0.5em 0 0.5em;
 }
 
-.skill-box {
-    margin-bottom: 1.2em;
-}
-
-.skill-name {
-    margin-bottom: 0.3em;
-    font-size: 0.9em;
+.tool-icon {
+    font-size: 2.5em;
+    display: block;
+    float: left;
+    margin: 0.4em 0.5em;
+    color: #47e6c7;
 }
 
 /* contact */
@@ -331,7 +330,6 @@ footer em {
         padding: 0;
     }
 
-    .about,
     .contact {
         flex-direction: row-reverse;
     }
