@@ -76,31 +76,6 @@ a {
     color: inherit;
 }
 
-progress {
-    appearance: none;
-    width: 100%;
-    height: 5px;
-    border: none;
-    background: transparent;
-    border-radius: 5px;
-    display: block;
-}
-
-progress::-webkit-progress-bar {
-    background: transparent;
-    border-radius: 5px;
-}
-
-progress::-moz-progress-bar {
-    background: #169e83;
-    border-radius: 5px;
-}
-
-progress::-webkit-progress-value {
-    background: #169e83;
-    border-radius: 5px;
-}
-
 /* ------------------------ */
 /* Classes */
 
