@@ -7,6 +7,7 @@ var gulp      = require('gulp'),
   responsive  = require('gulp-responsive'),
   bower       = require('gulp-main-bower-files'),
   filter      = require('gulp-filter'),
+  flatten     = require('gulp-flatten'),
   browserSync = require('browser-sync').create();
 
 // TODO: include source maps.
@@ -45,6 +46,19 @@ gulp.task('scripts', function() {
 gulp.task('scripts-watch', ['scripts'], function() {
   browserSync.reload();
   done();
+});
+
+gulp.task('fonts', function() {
+  var bowerFontsGlob = "bower_components/**/fonts/*.{eot,svg,ttf,woff,woff2}";
+  var vendorFontsGlob = 'resources/fonts/**/*.{eot,svg,ttf,woff,woff2}';
+
+  gulp.src(bowerFontsGlob)
+    .pipe(flatten())
+    .pipe(gulp.dest('build/fonts'));
+
+  gulp.src(vendorFontsGlob)
+    .pipe(flatten())
+    .pipe(gulp.dest('build/fonts'));
 });
 
 gulp.task('images', function() {

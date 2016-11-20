@@ -20,6 +20,7 @@
   "dependencies": {
     "reset-css": "latest",
     "jquery": "^3.1.1",
-    "masonry": "^4.1.1"
+    "masonry": "^4.1.1",
+    "devicon": "*"
   }
 }
