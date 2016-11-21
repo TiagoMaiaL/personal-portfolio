@@ -110,7 +110,7 @@ gulp.task('bower-scripts', function() {
 
 gulp.task('styles', function() {
   return gulp.src(stylesPath)
-    .pipe(concat('styles.all.css'))
+    .pipe(concat('main.css'))
     .pipe(prefixer({
       browsers: ['last 2 versions'],
       cascade: false
