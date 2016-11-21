@@ -112,7 +112,7 @@ a {
 /* header */
 
 header {
-    height: 100vh;
+    height: 98vh;
     background: linear-gradient(rgba(44,62,80,0.8), rgb(44,62,80)), url(../resources/images/hero-large.jpg);
     background-size: cover;
     background-position: center;
