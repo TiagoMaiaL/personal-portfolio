@@ -195,8 +195,9 @@ a {
     position: relative;
     z-index: 1;
     padding: 1em;
-    margin-bottom: -12em;
+    margin-bottom: -2em;
     opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
 
 .project .sources {
@@ -208,6 +209,26 @@ a {
 .project .sources .link {
     float: left;
     margin-right: 0.2em;
+}
+
+.project .dark-overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    transition: all 0.2s ease-in-out;
+}
+
+.project:hover .meta-info {
+    opacity: 1;
+    margin-bottom: 0;
+}
+
+.project:hover .dark-overlay {
+    opacity: .8;
 }
 
 /* about */
