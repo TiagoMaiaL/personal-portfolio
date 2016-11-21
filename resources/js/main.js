@@ -17,8 +17,10 @@
       if ($(window).width >= 900)
         return;
 
+      var hasClass = $(this).hasClass('active');
+
       $('.project').removeClass('active');
-      $(this).toggleClass('active');
+      $(this).toggleClass('active', !hasClass);
     });
 
   });
