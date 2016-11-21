@@ -204,11 +204,16 @@ a {
     margin: 0 auto;
     text-align: center;
     display: inline-block;
+    font-size: 1.5em;
 }
 
 .project .sources .link {
     float: left;
-    margin-right: 0.2em;
+    margin-right: 0;
+}
+
+.sources .link a {
+    padding: 0.5em;
 }
 
 .project .dark-overlay {
@@ -218,15 +223,17 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #111;
+    background: #222;
     transition: all 0.2s ease-in-out;
 }
 
+.project.active .meta-info,
 .project:hover .meta-info {
     opacity: 1;
     margin-bottom: 0;
 }
 
+.project.active .dark-overlay,
 .project:hover .dark-overlay {
     opacity: .8;
 }
@@ -313,6 +320,10 @@ footer em {
 }
 
 @media screen and (min-width: 700px) {
+
+    .project .sources {
+        font-size: 1.2em;
+    }
 
     .contacts,
     .skills {
